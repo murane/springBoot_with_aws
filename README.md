@@ -31,3 +31,8 @@ SpringApplcation.run으로 내장 톰캣을 실행한다.
   mvc와 관련된 controller,controllerAdvice,filter,interceptor
   ,webMvcConfigurer등의 빈을 띄워주는 WebMvcTest를 슬라이스 테스트에 사용한다.  
 * MockMvc -> perform으로 요청을 보내고 Expect로 응답과 body를 검증한다.
+
+### HelloResponseDto lombok적용  
+
+* @Getter -> 필드에 get메소드 생성
+* @RequiredArgsConstructor -> final필드에 대응하는 생성자 생성
