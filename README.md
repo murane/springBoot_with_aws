@@ -71,3 +71,17 @@ Data JPA를 사용함으로서 구현체에 종속되지 않으며 저장소도 
 * 생성자 or Builder
 * Builder의 장점 -> 체인 메소드로 인자 순서에 상관없이 명확하게 삽입 가능  
 
+* 쿼리 보는법 -> spring.jpa.show_sql=true  
+* id 생성 전략은 DB와 generatedValue Strategy에 따름  
+
+## 등록,수정,조회 API  
+
+* Service는 트랜잭션, 도메인간 순서보장  
+* 비즈니스처리는 Domain에서!
+* 생성자주입 -> RequiredArgsConstructor
+* @Transactional  
+* MVC -> @PathVariable, @RequestBody, @RequestParam  
+* 영속성 컨텍스트 -> 
+* 더티 체킹  -> 
+
+
