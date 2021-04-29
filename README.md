@@ -40,3 +40,34 @@ SpringApplcation.run으로 내장 톰캣을 실행한다.
 * assertThat, isEqualTo  
 * @RequestParam -> 요청에서 넘긴 파라미터를 바인딩  
 
+# 3장  
+객체지향 패러다임을 Persistence영역에 적용해보자  
+-> ORM을 활용해보자  
+  
+데이터 중심의 반복적인 CRUD작성에서 벗어나  
+비즈니스로직에 집중할 수 있다.  
+
+JPA는 자바 ORM의 표준 인터페이스 이며 구현체중 가장 활성화된것이 Hibernate  
+그리고 구현체를 더 쉽게 사용할 수 있게 추상화한것이 Spring Data JPA이다.  
+Data JPA를 사용함으로서 구현체에 종속되지 않으며 저장소도 교체 가능해진다.  
+
+## 요구사항 분석
+
+#### 게시판 기능
+
+* 게시글 CRUD
+
+#### 회원 기능
+
+* 구글/네이버 로그인
+* 로그인한 사용자 글 작성 권한
+* 본인 작성 글에 대한 권한 관리
+
+## Posts  
+
+* @GeneratedValue Strategy  
+* @NoArgsConstructor -> 프록시 생성을 위해 필수  
+* 명확하지 않은 setter는 배제
+* 생성자 or Builder
+* Builder의 장점 -> 체인 메소드로 인자 순서에 상관없이 명확하게 삽입 가능  
+

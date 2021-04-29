@@ -1,7 +1,5 @@
-package com.jun.study.spring.web.dto;
+package com.jun.study.springboot_aws.web.dto;
 
-import com.jun.study.springboot.web.dto.HelloResponseDto;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
