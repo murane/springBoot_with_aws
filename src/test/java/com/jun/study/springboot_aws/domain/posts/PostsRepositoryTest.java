@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -31,5 +32,21 @@ class PostsRepositoryTest {
         Posts posts = postsList.get(0);
         assertThat(posts.getTitle()).isEqualTo(title);
         assertThat(posts.getContent()).isEqualTo(content);
+    }
+    @Test
+    void BaseTimeEntity_등록(){
+        LocalDateTime now = LocalDateTime.now();
+        postsRepository.save(Posts.builder()
+                .author("murane@naver.com")
+                .title("title")
+                .content("content")
+                .build()
+        );
+
+        var postsList = postsRepository.findAll();
+        Posts posts = postsList.get(0);
+
+        assertThat(posts.getCreatedDate()).isAfter(now);
+        assertThat(posts.getModifiedDate()).isAfter(now);
     }
 }

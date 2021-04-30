@@ -84,4 +84,12 @@ Data JPA를 사용함으로서 구현체에 종속되지 않으며 저장소도 
 * 영속성 컨텍스트 -> 
 * 더티 체킹  -> 
 
+## JPA Auditing  
+
+* @MappedSuperclass  
+* @EntityListeners  
+
+# 4장  
+
+## 머스테치(mustache)  
 
