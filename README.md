@@ -94,3 +94,7 @@ Data JPA를 사용함으로서 구현체에 종속되지 않으며 저장소도 
 ## 머스테치(mustache)  
 
 * html은 위에서부터 코드가 실행되므로 css는 위에 js는 하단에 호출하는것이 좋다
+
+* @Query로 JPQL 작성 가능
+* 복잡한 쿼리는 queryDSL 추천
+* 선언적 트랜잭션의 propagation, readonly의 효과,isolation
