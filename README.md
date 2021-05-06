@@ -97,4 +97,14 @@ Data JPA를 사용함으로서 구현체에 종속되지 않으며 저장소도 
 
 * @Query로 JPQL 작성 가능
 * 복잡한 쿼리는 queryDSL 추천
-* 선언적 트랜잭션의 propagation, readonly의 효과,isolation
+* 선언적 트랜잭션의 propagation, readonly의 효과,isolation  
+
+#5장  
+
+## 스프링 시큐리티, Oauth2
+
+* 스프링 시큐리티는 인증과 인가에 관한 막강한 커스텀이 가능하지만 여전히 매우 복잡하다  
+* 0Auth를 이용하면 이러한 복잡성을 믿을만한 서비스에 위임할 수 있다.
+* OAuth ->  
+
+## 구글 서비스 등록
