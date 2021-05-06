@@ -107,4 +107,6 @@ Data JPA를 사용함으로서 구현체에 종속되지 않으며 저장소도 
 * 0Auth를 이용하면 이러한 복잡성을 믿을만한 서비스에 위임할 수 있다.
 * OAuth ->  
 
-## 구글 서비스 등록
+## 구글 서비스 
+
+* @Enumerated(EnumType.STRING) -> Enum은 String으로 저장해야 알아볼 수 있따.
