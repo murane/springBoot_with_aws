@@ -2,6 +2,7 @@ package com.jun.study.springboot_aws.web;
 
 import com.jun.study.springboot_aws.domain.posts.Posts;
 import com.jun.study.springboot_aws.domain.posts.PostsRepository;
+import com.jun.study.springboot_aws.domain.user.Role;
 import com.jun.study.springboot_aws.web.dto.PostsResponseDto;
 import com.jun.study.springboot_aws.web.dto.PostsSaveRequestDto;
 import com.jun.study.springboot_aws.web.dto.PostsUpdateRequestDto;
@@ -14,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import reactor.core.publisher.Mono;
 
@@ -21,6 +23,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.springframework.security.test.web.reactive.server.SecurityMockServerConfigurers.mockUser;
 
 @AutoConfigureWebTestClient
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -35,6 +38,7 @@ class PostsApiControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "USER")
     void Posts_등록() throws Exception{
         String title = "title";
         String content = "content";
@@ -59,6 +63,7 @@ class PostsApiControllerTest {
     }
 
     @Test
+    @WithMockUser(roles = "USER")
     void Posts_수정() throws Exception{
         Posts savedPosts = postsRepository.save(Posts.builder()
                 .title("title")

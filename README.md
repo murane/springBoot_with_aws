@@ -113,10 +113,21 @@ Data JPA를 사용함으로서 구현체에 종속되지 않으며 저장소도 
 * 스프링 시큐리티에선 권한 코드에 ROLE_이 있어야 한다.
 
 ## 어노테이션으로 개선
+
 * @Target -> 어노테이션이 생성될 수 있는 위치
 * HandlerMethodArgumentResolver를 구현한 CustomArgumentResolver를 통해  
 supportsParameter를 확인하고 resolveArgument로 파라미터를 전달할 수 있다  
 * 구현한 MethodArgumentResolver를 WebConfig클래스에 추가시켜야 한다.
+
 ## 세션 저장소로 데이터베이스 사용  
-* 세션이 in memory인 단점을 보완하는 방법으로 DB를 사용하자
+
+* 세션이 in memory인 단점을 보완하는 방법으로 DB를 사용하자  
+
+## 네이버 로그인 연동  
+
+* 
+
+## 기존 테스트에 시큐리티 적용  
+
+* @DataJpaTest의 경우 @EnableJpaAuditing을 자동으로 스캔하지 않기때문에 include 해줘야 한다.
 * 
